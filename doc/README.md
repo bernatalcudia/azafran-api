@@ -1,0 +1,1 @@
+![Interface user Azfran-API](Swagger%20Azafran%20API.png)
