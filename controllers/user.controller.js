@@ -40,13 +40,9 @@ const register = async (req, res) => {
     try {
         const user = new User({ username: username, password: hashedPassword })
         await user.save()
+        res.status(201).send('user registered', user)
     } catch (error) {
         console.log(error)
-        if (error.errorResponse.errmsg) {
-            res.status(500).send(error.errorResponse.errmsg)
-        } else {
-            res.status(500).send('Unexpected error')
-        }
     }
 }
 

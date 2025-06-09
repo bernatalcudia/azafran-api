@@ -19,7 +19,7 @@ const main = () => {
 
     app.use('/recipes', recipesRoutes)
     app.use('/ingredients', ingredientsRoutes)
-    app.use('/', usersRoutes)
+    app.use('/users', usersRoutes)
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
     dbConnection()
