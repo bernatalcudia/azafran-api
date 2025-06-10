@@ -10,7 +10,7 @@ const login = async (req, res) => {
         return
     }
 
-    const user = User.findOne({ username: username })
+    const user = await User.findOne({ username: username })
 
     if (!user) {
         res.status(404).send({ msg: 'invalid credentials' })
