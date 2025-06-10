@@ -6,7 +6,7 @@ const { JWT_SECRET } = require('../config.js')
 const login = async (req, res) => {
     const { username, password } = req.body
     if (!username || !password) {
-        res.status(404).send('Missing username or password')
+        res.status(404).send({ msg: 'Missing username or password' })
         return
     }
 
